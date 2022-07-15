@@ -16,6 +16,14 @@ useUnifiedTopology: true}).then(
 );
 const db = mongoose.connection.useDb('sample_guides').collection('planets');
 
+
+app.get('/',(req,res)=>
+{
+res.send('Hello World');
+
+
+})
+
 app.get('/data', (req, res) => {
 
     db.find().toArray(
